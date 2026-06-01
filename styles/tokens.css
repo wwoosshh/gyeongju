@@ -19,17 +19,18 @@
   --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-serif: 'Noto Serif KR', 'Times New Roman', serif;
 
-  /* --- Type scale (slide-relative, clamp for safety) --- */
-  --type-display: clamp(56px, 7.2vw, 124px);
-  --type-h1: clamp(40px, 4.6vw, 80px);
-  --type-h2: clamp(28px, 3.2vw, 52px);
-  --type-h3: clamp(20px, 2.2vw, 34px);
-  --type-body-l: clamp(17px, 1.4vw, 22px);
-  --type-body: clamp(15px, 1.1vw, 18px);
-  --type-body-s: clamp(13px, 0.95vw, 15px);
-  --type-eyebrow: clamp(11px, 0.85vw, 13px);
-  --type-caption: clamp(10px, 0.78vw, 12px);
-  --type-numeral-huge: clamp(140px, 18vw, 280px);
+  /* --- Type scale (slide-relative, clamp for safety) ---
+     발표용 1920×1080 + 강의실 투사 거리 고려, 큰 사이즈로 조정 */
+  --type-display: clamp(72px, 8.5vw, 160px);
+  --type-h1: clamp(56px, 5.6vw, 110px);
+  --type-h2: clamp(40px, 4.5vw, 80px);
+  --type-h3: clamp(28px, 2.8vw, 48px);
+  --type-body-l: clamp(22px, 1.7vw, 30px);
+  --type-body: clamp(20px, 1.4vw, 26px);
+  --type-body-s: clamp(17px, 1.2vw, 22px);
+  --type-eyebrow: clamp(14px, 1vw, 18px);
+  --type-caption: clamp(13px, 0.9vw, 17px);
+  --type-numeral-huge: clamp(160px, 16vw, 320px);
 
   /* --- Spacing scale --- */
   --space-1: 4px;
