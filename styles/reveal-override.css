@@ -1,0 +1,6 @@
+/* Reveal.js default theme override.
+   Goal: neutralize default styles so our custom design owns the look.
+   Task 5 fills this in. */
+.reveal { font-family: var(--font-sans); color: var(--color-ink); }
+.reveal .slides { text-align: left; }
+.reveal section { font-size: inherit; line-height: inherit; }

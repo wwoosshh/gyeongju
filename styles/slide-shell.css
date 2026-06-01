@@ -1,0 +1,66 @@
+/* Slide chrome — header (counter + section label) + body */
+.scene-frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.scene--dark .scene-frame {
+  background: var(--color-bg-dark);
+  color: #efe6d0;
+}
+
+.scene-chrome {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--slide-pad-y) var(--slide-pad-x) 0;
+  flex: 0 0 auto;
+}
+
+.scene-counter {
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--color-text-quiet);
+  text-transform: uppercase;
+}
+
+.scene--dark .scene-counter { color: rgba(239, 230, 208, 0.4); }
+
+.scene-section {
+  font-size: var(--type-caption);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.scene--dark .scene-section { color: var(--color-gold); }
+
+.scene-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(20px, 2.5vh, 40px) var(--slide-pad-x) var(--slide-pad-y);
+  min-height: 0;
+}
+
+/* Bottom-right slide counter (we update this in init.js) */
+.deck-counter {
+  position: fixed;
+  bottom: 14px;
+  right: 20px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.35);
+  font-variant-numeric: tabular-nums;
+  z-index: 100;
+  pointer-events: none;
+}

@@ -4,17 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>경주 · 4인가족 캠페인 2026</title>
+
+  <!-- Reveal.js core (mechanics only — NO theme) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Our design system (loaded AFTER reveal.css so we win cascade) -->
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/typography.css">
+  <link rel="stylesheet" href="styles/reveal-override.css">
   <link rel="stylesheet" href="styles/slide-shell.css">
   <link rel="stylesheet" href="styles/layouts.css">
 </head>
 <body>
-  <main class="deck">
-    <!-- scene sections inserted in later tasks -->
-  </main>
+  <div class="reveal">
+    <div class="slides">
+      <!-- scene <section>s inserted in later tasks. One temporary stub for verification: -->
+      <section data-scene="0">
+        <div class="scene-frame">
+          <header class="scene-chrome">
+            <span class="scene-counter">SCENE 00 / 33</span>
+            <span class="scene-section">SETUP TEST</span>
+          </header>
+          <div class="scene-body">
+            <p class="t-eyebrow">Reveal.js integration</p>
+            <h1 class="t-display" style="margin-top:auto">셋업 확인</h1>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
   <div class="deck-counter" aria-hidden="true"></div>
-  <script src="scripts/deck.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="scripts/init.js"></script>
 </body>
 </html>
