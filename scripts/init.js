@@ -238,6 +238,31 @@
     }, true);
   }
 
-  Reveal.on('slidechanged', () => { updateCounter(); updateTimeBar(); refreshAutoplay(); });
-  Reveal.on('ready', () => { updateCounter(); updateTimeBar(); initPhotoSliders(); refreshAutoplay(); });
+  // === Prefetch next slide's images ===
+  // 현재 슬라이드 N 진입 시 N+1 슬라이드의 사진을 백그라운드로 로드 →
+  // 다음 슬라이드 전환 시 흰 깜빡임 없이 즉시 표시
+  const prefetched = new Set();
+
+  function prefetchSlideImages(slideEl) {
+    if (!slideEl) return;
+    const imgs = slideEl.querySelectorAll('img[src]');
+    imgs.forEach((img) => {
+      const src = img.getAttribute('src');
+      if (!src || prefetched.has(src)) return;
+      prefetched.add(src);
+      const preload = new Image();
+      preload.src = src;
+    });
+  }
+
+  function prefetchAdjacent() {
+    const sections = Array.from(document.querySelectorAll('.reveal .slides > section'));
+    const currentIdx = Reveal.getIndices().h;
+    // Prefetch next slide (and slide after that for smoother forward navigation)
+    if (sections[currentIdx + 1]) prefetchSlideImages(sections[currentIdx + 1]);
+    if (sections[currentIdx + 2]) prefetchSlideImages(sections[currentIdx + 2]);
+  }
+
+  Reveal.on('slidechanged', () => { updateCounter(); updateTimeBar(); refreshAutoplay(); prefetchAdjacent(); });
+  Reveal.on('ready', () => { updateCounter(); updateTimeBar(); initPhotoSliders(); refreshAutoplay(); prefetchAdjacent(); });
 })();

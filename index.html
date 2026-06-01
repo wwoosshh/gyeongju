@@ -3,7 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
   <title>경주 · 4인가족 캠페인 2026</title>
+
+  <!-- 외부 CDN 사전 연결 (TLS 핸드셰이크 첫 페인트 전에 시작) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- S1 표지 사진 우선 로드 (LCP 단축) -->
+  <link rel="preload" as="image" href="assets/photos/cover-hero.jpg" fetchpriority="high">
 
   <!-- Reveal.js core (mechanics only — NO theme) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
@@ -28,7 +37,7 @@
               <span class="scene-section">COVER</span>
             </header>
             <div class="scene-body">
-              <div class="fb-image"><img decoding="async" src="assets/photos/cover-hero.jpg" alt="표지" class="photo"></div>
+              <div class="fb-image"><img width="1920" height="1080" decoding="async" src="assets/photos/cover-hero.jpg" alt="표지" class="photo"></div>
               <div class="fb-overlay">
                 <p class="t-eyebrow">GYEONGJU CAMPAIGN 2026</p>
                 <h1 class="t-display">가족여행의 성지,<br>경주 2박3일</h1>
@@ -52,12 +61,12 @@
                 <p class="t-body t-muted">6대 명소 — 도보권 또는 자차 30분권 내</p>
               </div>
               <div class="matrix-grid" style="grid-template-columns:repeat(3, 1fr); grid-template-rows:repeat(2, 1fr)">
-                <div class="matrix-cell"><img loading="lazy" decoding="async" src="assets/photos/why-hwangnidangil.jpg" alt="황리단길" class="matrix-cell-img"><span class="t-label t-quiet">01</span><h3 class="t-h3">황리단길</h3><p class="t-body-s t-muted">먹거리·기념품 거리</p></div>
-                <div class="matrix-cell"><img loading="lazy" decoding="async" src="assets/photos/why-donggung.jpg" alt="동궁과 월지" class="matrix-cell-img"><span class="t-label t-quiet">02</span><h3 class="t-h3">동궁과 월지</h3><p class="t-body-s t-muted">신라의 야경</p></div>
-                <div class="matrix-cell"><img loading="lazy" decoding="async" src="assets/photos/why-cheomseongdae-gyerim.jpeg" alt="첨성대·계림" class="matrix-cell-img"><span class="t-label t-quiet">03</span><h3 class="t-h3">첨성대 · 계림</h3><p class="t-body-s t-muted">동양 最古 천문대</p></div>
-                <div class="matrix-cell"><img loading="lazy" decoding="async" src="assets/photos/why-woljeonggyo.jpg" alt="월정교" class="matrix-cell-img"><span class="t-label t-quiet">04</span><h3 class="t-h3">월정교</h3><p class="t-body-s t-muted">통일신라의 다리</p></div>
-                <div class="matrix-cell"><img loading="lazy" decoding="async" src="assets/photos/why-bulguksa-seokguram.jpeg" alt="불국사·석굴암" class="matrix-cell-img"><span class="t-label t-quiet">05</span><h3 class="t-h3">불국사 · 석굴암</h3><p class="t-body-s t-muted">UNESCO 세계유산</p></div>
-                <div class="matrix-cell"><img loading="lazy" decoding="async" src="assets/photos/why-gyeongju-world.jpeg" alt="엑스포·경주월드" class="matrix-cell-img"><span class="t-label t-quiet">06</span><h3 class="t-h3">엑스포 · 경주월드</h3><p class="t-body-s t-muted">가족 액티비티</p></div>
+                <div class="matrix-cell"><img width="1920" height="1080" loading="lazy" decoding="async" src="assets/photos/why-hwangnidangil.jpg" alt="황리단길" class="matrix-cell-img"><span class="t-label t-quiet">01</span><h3 class="t-h3">황리단길</h3><p class="t-body-s t-muted">먹거리·기념품 거리</p></div>
+                <div class="matrix-cell"><img width="1600" height="1067" loading="lazy" decoding="async" src="assets/photos/why-donggung.jpg" alt="동궁과 월지" class="matrix-cell-img"><span class="t-label t-quiet">02</span><h3 class="t-h3">동궁과 월지</h3><p class="t-body-s t-muted">신라의 야경</p></div>
+                <div class="matrix-cell"><img width="600" height="450" loading="lazy" decoding="async" src="assets/photos/why-cheomseongdae-gyerim.jpeg" alt="첨성대·계림" class="matrix-cell-img"><span class="t-label t-quiet">03</span><h3 class="t-h3">첨성대 · 계림</h3><p class="t-body-s t-muted">동양 最古 천문대</p></div>
+                <div class="matrix-cell"><img width="2000" height="1125" loading="lazy" decoding="async" src="assets/photos/why-woljeonggyo.jpg" alt="월정교" class="matrix-cell-img"><span class="t-label t-quiet">04</span><h3 class="t-h3">월정교</h3><p class="t-body-s t-muted">통일신라의 다리</p></div>
+                <div class="matrix-cell"><img width="1997" height="2000" loading="lazy" decoding="async" src="assets/photos/why-bulguksa-seokguram.jpeg" alt="불국사·석굴암" class="matrix-cell-img"><span class="t-label t-quiet">05</span><h3 class="t-h3">불국사 · 석굴암</h3><p class="t-body-s t-muted">UNESCO 세계유산</p></div>
+                <div class="matrix-cell"><img width="2000" height="1363" loading="lazy" decoding="async" src="assets/photos/why-gyeongju-world.jpeg" alt="엑스포·경주월드" class="matrix-cell-img"><span class="t-label t-quiet">06</span><h3 class="t-h3">엑스포 · 경주월드</h3><p class="t-body-s t-muted">가족 액티비티</p></div>
               </div>
             </div>
           </div>
@@ -181,7 +190,7 @@
               <span class="scene-section">DAY 1 · 09:00</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/route-01-seoul-gyeongju.png" alt="서울 → 경주 노선 지도" class="photo"></div>
+              <div class="split-photo"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-01-seoul-gyeongju.png" alt="서울 → 경주 노선 지도" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">출발</p>
                 <h2 class="t-h1">서울 → 경주</h2>
@@ -212,14 +221,14 @@
               <div class="split-photo">
                 <div class="photo-slider">
                   <div class="photo-slider-track">
-                    <img loading="lazy" decoding="async" src="assets/photos/bandeusi-1.jpg" alt="반듯이" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bandeusi-2.jpg" alt="반듯이" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bandeusi-3.jpg" alt="반듯이" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bandeusi-4.jpg" alt="반듯이" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bandeusi-5.jpg" alt="반듯이" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bandeusi-6.jpg" alt="반듯이" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bandeusi-7.jpg" alt="반듯이" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bandeusi-8.jpg" alt="반듯이" class="photo">
+                    <img width="1280" height="1280" loading="lazy" decoding="async" src="assets/photos/bandeusi-1.jpg" alt="반듯이" class="photo">
+                    <img width="1080" height="1350" loading="lazy" decoding="async" src="assets/photos/bandeusi-2.jpg" alt="반듯이" class="photo">
+                    <img width="800" height="800" loading="lazy" decoding="async" src="assets/photos/bandeusi-3.jpg" alt="반듯이" class="photo">
+                    <img width="800" height="800" loading="lazy" decoding="async" src="assets/photos/bandeusi-4.jpg" alt="반듯이" class="photo">
+                    <img width="800" height="800" loading="lazy" decoding="async" src="assets/photos/bandeusi-5.jpg" alt="반듯이" class="photo">
+                    <img width="800" height="800" loading="lazy" decoding="async" src="assets/photos/bandeusi-6.jpg" alt="반듯이" class="photo">
+                    <img width="800" height="800" loading="lazy" decoding="async" src="assets/photos/bandeusi-7.jpg" alt="반듯이" class="photo">
+                    <img width="800" height="800" loading="lazy" decoding="async" src="assets/photos/bandeusi-8.jpg" alt="반듯이" class="photo">
                   </div>
                   <button class="photo-slider-prev" type="button" aria-label="이전 사진">‹</button>
                   <button class="photo-slider-next" type="button" aria-label="다음 사진">›</button>
@@ -251,7 +260,7 @@
                   <p class="t-h2 t-numeric">50,000 – 75,600</p>
                 </div>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-03-hwangnidang-bandeusi.png" alt="ROUTE · 황리단주차장 → 반듯이" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-03-hwangnidang-bandeusi.png" alt="ROUTE · 황리단주차장 → 반듯이" class="photo"></div>
             </div>
           </div>
         </section>
@@ -265,11 +274,11 @@
             </header>
             <div class="scene-body">
               <div class="coll-photos">
-                <img loading="lazy" decoding="async" src="assets/photos/hwangnidangil-street.jpg" alt="황리단길 거리" class="photo">
-                <img loading="lazy" decoding="async" src="assets/photos/hwangnidangil-dismoment.jpg" alt="디스모먼트" class="photo">
-                <img loading="lazy" decoding="async" src="assets/photos/sipwonppang.gif" alt="십원빵" class="photo">
-                <img loading="lazy" decoding="async" src="assets/photos/sundubu-icecream.jpg" alt="순두부 아이스크림" class="photo">
-                <img loading="lazy" decoding="async" src="assets/photos/baerisamreung-interior.jpg" alt="배리삼릉공원" class="photo">
+                <img width="1200" height="800" loading="lazy" decoding="async" src="assets/photos/hwangnidangil-street.jpg" alt="황리단길 거리" class="photo">
+                <img width="800" height="1067" loading="lazy" decoding="async" src="assets/photos/hwangnidangil-dismoment.jpg" alt="디스모먼트" class="photo">
+                <img width="360" height="640" loading="lazy" decoding="async" src="assets/photos/sipwonppang.gif" alt="십원빵" class="photo">
+                <img width="1280" height="853" loading="lazy" decoding="async" src="assets/photos/sundubu-icecream.jpg" alt="순두부 아이스크림" class="photo">
+                <img width="960" height="960" loading="lazy" decoding="async" src="assets/photos/baerisamreung-interior.jpg" alt="배리삼릉공원" class="photo">
               </div>
               <div class="coll-aside">
                 <p class="t-label">산책 · 기념품</p>
@@ -279,7 +288,7 @@
                   <li><b class="t-h3">디스모먼트</b><p class="t-muted">첨성대 무드등 · 코르크 컵받침</p></li>
                 </ul>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-04-bandeusi-hwangnidang.png" alt="ROUTE · 반듯이 → 황리단길 산책" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-04-bandeusi-hwangnidang.png" alt="ROUTE · 반듯이 → 황리단길 산책" class="photo"></div>
             </div>
           </div>
         </section>
@@ -295,15 +304,15 @@
               <div class="split-photo">
                 <div class="photo-slider">
                   <div class="photo-slider-track">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-1.webp" alt="아벤타 호텔" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-2.webp" alt="아벤타 호텔" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-3.webp" alt="아벤타 호텔" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-4.webp" alt="아벤타 호텔" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-5.webp" alt="아벤타 호텔" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-6.webp" alt="아벤타 호텔" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-7.webp" alt="아벤타 호텔" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-8.webp" alt="아벤타 호텔" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/aventa-9.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-1.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-2.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-3.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-4.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-5.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-6.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-7.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-8.webp" alt="아벤타 호텔" class="photo">
+                    <img width="2400" height="1324" loading="lazy" decoding="async" src="assets/photos/aventa-9.webp" alt="아벤타 호텔" class="photo">
                   </div>
                   <button class="photo-slider-prev" type="button" aria-label="이전 사진">‹</button>
                   <button class="photo-slider-next" type="button" aria-label="다음 사진">›</button>
@@ -334,7 +343,7 @@
                   <p class="t-h2 t-numeric">≈ 450,000</p>
                 </div>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-05-hwangnidang-aventa.png" alt="ROUTE · 황리단주차장 → 아벤타 호텔" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-05-hwangnidang-aventa.png" alt="ROUTE · 황리단주차장 → 아벤타 호텔" class="photo"></div>
             </div>
           </div>
         </section>
@@ -347,7 +356,7 @@
               <span class="scene-section">DAY 1 · 16:30</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/gilgeori-museum-1.jpg" alt="경주 길거리박물관" class="photo"></div>
+              <div class="split-photo"><img width="966" height="725" loading="lazy" decoding="async" src="assets/photos/gilgeori-museum-1.jpg" alt="경주 길거리박물관" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">황남지구 산책 시작</p>
                 <h2 class="t-h1">길거리박물관</h2>
@@ -358,7 +367,7 @@
                   <li><span class="t-muted">입장</span><span class="kv-val">무료</span></li>
                 </ul>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-06-aventa-gilgeori.png" alt="ROUTE · 아벤타 호텔 → 길거리박물관" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-06-aventa-gilgeori.png" alt="ROUTE · 아벤타 호텔 → 길거리박물관" class="photo"></div>
             </div>
           </div>
         </section>
@@ -371,7 +380,7 @@
               <span class="scene-section">DAY 1 · 17:00</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/naemul-tomb.jpeg" alt="내물왕릉" class="photo"></div>
+              <div class="split-photo"><img width="1023" height="1280" loading="lazy" decoding="async" src="assets/photos/naemul-tomb.jpeg" alt="내물왕릉" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">왕릉 시리즈 01</p>
                 <h2 class="t-h1">내물왕릉</h2>
@@ -382,7 +391,7 @@
                   <li><span class="t-muted">입장</span><span class="kv-val">무료</span></li>
                 </ul>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-07-gilgeori-naemul.png" alt="ROUTE · 길거리박물관 → 내물왕릉" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-07-gilgeori-naemul.png" alt="ROUTE · 길거리박물관 → 내물왕릉" class="photo"></div>
             </div>
           </div>
         </section>
@@ -395,7 +404,7 @@
               <span class="scene-section">DAY 1 · 17:15</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/gyerim.jpg" alt="계림" class="photo"></div>
+              <div class="split-photo"><img width="2000" height="1333" loading="lazy" decoding="async" src="assets/photos/gyerim.jpg" alt="계림" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">설화의 숲</p>
                 <h2 class="t-h1">계림</h2>
@@ -406,7 +415,7 @@
                   <li><span class="t-muted">입장</span><span class="kv-val">무료</span></li>
                 </ul>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-08-naemul-gyerim.png" alt="ROUTE · 내물왕릉 → 계림" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-08-naemul-gyerim.png" alt="ROUTE · 내물왕릉 → 계림" class="photo"></div>
             </div>
           </div>
         </section>
@@ -419,7 +428,7 @@
               <span class="scene-section">DAY 1 · 17:30</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/cheomseongdae.jpg" alt="첨성대" class="photo"></div>
+              <div class="split-photo"><img width="2000" height="1333" loading="lazy" decoding="async" src="assets/photos/cheomseongdae.jpg" alt="첨성대" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">동양 최고(最古) 천문대</p>
                 <h2 class="t-h1">첨성대</h2>
@@ -430,7 +439,7 @@
                   <li><span class="t-muted">한복 대여</span><span class="kv-val">권장 — 가족 단체사진</span></li>
                 </ul>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-09-gyerim-cheomseongdae.png" alt="ROUTE · 계림 → 첨성대" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-09-gyerim-cheomseongdae.png" alt="ROUTE · 계림 → 첨성대" class="photo"></div>
             </div>
           </div>
         </section>
@@ -446,20 +455,20 @@
               <div class="split-photo">
                 <div class="photo-slider">
                   <div class="photo-slider-track">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-1.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-2.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-3.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-4.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-5.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-6.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-7.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-8.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-9.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-10.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-11.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-12.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-13.webp" alt="여미온" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/yeomion-14.webp" alt="여미온" class="photo">
+                    <img width="2048" height="1536" loading="lazy" decoding="async" src="assets/photos/yeomion-1.webp" alt="여미온" class="photo">
+                    <img width="2048" height="1536" loading="lazy" decoding="async" src="assets/photos/yeomion-2.webp" alt="여미온" class="photo">
+                    <img width="2048" height="1536" loading="lazy" decoding="async" src="assets/photos/yeomion-3.webp" alt="여미온" class="photo">
+                    <img width="2048" height="1536" loading="lazy" decoding="async" src="assets/photos/yeomion-4.webp" alt="여미온" class="photo">
+                    <img width="2048" height="1536" loading="lazy" decoding="async" src="assets/photos/yeomion-5.webp" alt="여미온" class="photo">
+                    <img width="2048" height="1536" loading="lazy" decoding="async" src="assets/photos/yeomion-6.webp" alt="여미온" class="photo">
+                    <img width="2048" height="1536" loading="lazy" decoding="async" src="assets/photos/yeomion-7.webp" alt="여미온" class="photo">
+                    <img width="1536" height="2048" loading="lazy" decoding="async" src="assets/photos/yeomion-8.webp" alt="여미온" class="photo">
+                    <img width="1536" height="2048" loading="lazy" decoding="async" src="assets/photos/yeomion-9.webp" alt="여미온" class="photo">
+                    <img width="1536" height="2048" loading="lazy" decoding="async" src="assets/photos/yeomion-10.webp" alt="여미온" class="photo">
+                    <img width="1536" height="2048" loading="lazy" decoding="async" src="assets/photos/yeomion-11.webp" alt="여미온" class="photo">
+                    <img width="1536" height="2048" loading="lazy" decoding="async" src="assets/photos/yeomion-12.webp" alt="여미온" class="photo">
+                    <img width="2048" height="2048" loading="lazy" decoding="async" src="assets/photos/yeomion-13.webp" alt="여미온" class="photo">
+                    <img width="2048" height="2048" loading="lazy" decoding="async" src="assets/photos/yeomion-14.webp" alt="여미온" class="photo">
                   </div>
                   <button class="photo-slider-prev" type="button" aria-label="이전 사진">‹</button>
                   <button class="photo-slider-next" type="button" aria-label="다음 사진">›</button>
@@ -496,7 +505,7 @@
                   <p class="t-h2 t-numeric">≈ 60,000</p>
                 </div>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-10-cheomseongdae-yeomion.png" alt="ROUTE · 첨성대 → 여미온" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-10-cheomseongdae-yeomion.png" alt="ROUTE · 첨성대 → 여미온" class="photo"></div>
             </div>
           </div>
         </section>
@@ -541,7 +550,7 @@
               <span class="scene-section">DAY 2 · 09:00</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/seongdeok-tomb.png" alt="성덕왕릉" class="photo"></div>
+              <div class="split-photo"><img width="1080" height="694" loading="lazy" decoding="async" src="assets/photos/seongdeok-tomb.png" alt="성덕왕릉" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">왕릉 시리즈 02</p>
                 <h2 class="t-h1">성덕왕릉</h2>
@@ -551,7 +560,7 @@
                   <li><span class="t-muted">호텔에서</span><span class="kv-val">자차 20분 · 12km</span></li>
                 </ul>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-12-aventa-seongdeok.png" alt="ROUTE · 아벤타 호텔 → 성덕왕릉" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-12-aventa-seongdeok.png" alt="ROUTE · 아벤타 호텔 → 성덕왕릉" class="photo"></div>
             </div>
           </div>
         </section>
@@ -564,7 +573,7 @@
               <span class="scene-section">DAY 2 · 09:30 · UNESCO</span>
             </header>
             <div class="scene-body">
-              <div class="fb-image"><img loading="lazy" decoding="async" src="assets/photos/bulguksa.jpg" alt="불국사" class="photo"></div>
+              <div class="fb-image"><img width="2000" height="1335" loading="lazy" decoding="async" src="assets/photos/bulguksa.jpg" alt="불국사" class="photo"></div>
               <div class="fb-overlay">
                 <p class="t-eyebrow" style="opacity:0.9">UNESCO 세계유산</p>
                 <div>
@@ -588,7 +597,7 @@
               <span class="scene-section">DAY 2 · 11:00 · UNESCO</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/seokguram.jpg" alt="석굴암" class="photo"></div>
+              <div class="split-photo"><img width="1997" height="2000" loading="lazy" decoding="async" src="assets/photos/seokguram.jpg" alt="석굴암" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">UNESCO 세계유산</p>
                 <h2 class="t-h1">석굴암</h2>
@@ -599,7 +608,7 @@
                   <li><span class="t-muted">관람</span><span class="kv-val">2시간</span></li>
                 </ul>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-14-bulguksa-seokguram.png" alt="ROUTE · 불국사 → 석굴암" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-14-bulguksa-seokguram.png" alt="ROUTE · 불국사 → 석굴암" class="photo"></div>
             </div>
           </div>
         </section>
@@ -615,17 +624,17 @@
               <div class="split-photo">
                 <div class="photo-slider">
                   <div class="photo-slider-track">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-1.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-2.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-3.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-4.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-5.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-6.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-7.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-8.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-9.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-10.webp" alt="난식당1974" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/nansikdang-11.webp" alt="난식당1974" class="photo">
+                    <img width="765" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-1.webp" alt="난식당1974" class="photo">
+                    <img width="820" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-2.webp" alt="난식당1974" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-3.webp" alt="난식당1974" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-4.webp" alt="난식당1974" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-5.webp" alt="난식당1974" class="photo">
+                    <img width="1360" height="766" loading="lazy" decoding="async" src="assets/photos/nansikdang-6.webp" alt="난식당1974" class="photo">
+                    <img width="764" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-7.webp" alt="난식당1974" class="photo">
+                    <img width="907" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-8.webp" alt="난식당1974" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-9.webp" alt="난식당1974" class="photo">
+                    <img width="1020" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-10.webp" alt="난식당1974" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/nansikdang-11.webp" alt="난식당1974" class="photo">
                   </div>
                   <button class="photo-slider-prev" type="button" aria-label="이전 사진">‹</button>
                   <button class="photo-slider-next" type="button" aria-label="다음 사진">›</button>
@@ -658,7 +667,7 @@
                   <p class="t-h2 t-numeric">60,000 – 68,000</p>
                 </div>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-15-bulguksa-nansikdang.png" alt="ROUTE · 불국사 → 난식당1974" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-15-bulguksa-nansikdang.png" alt="ROUTE · 불국사 → 난식당1974" class="photo"></div>
             </div>
           </div>
         </section>
@@ -671,7 +680,7 @@
               <span class="scene-section">DAY 2 · 14:00</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/national-museum.jpg" alt="국립경주박물관" class="photo"></div>
+              <div class="split-photo"><img width="2000" height="1125" loading="lazy" decoding="async" src="assets/photos/national-museum.jpg" alt="국립경주박물관" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">교육 핵심 코스</p>
                 <h2 class="t-h1">국립경주박물관</h2>
@@ -683,7 +692,7 @@
                   <li><span class="t-muted">인근 이디야커피</span><span class="kv-val t-numeric">≈ 20,000</span></li>
                 </ul>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-16-nansikdang-museum.png" alt="ROUTE · 난식당1974 → 국립경주박물관" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-16-nansikdang-museum.png" alt="ROUTE · 난식당1974 → 국립경주박물관" class="photo"></div>
             </div>
           </div>
         </section>
@@ -699,20 +708,20 @@
               <div class="split-photo">
                 <div class="photo-slider">
                   <div class="photo-slider-track">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-1.jpg" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-2.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-3.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-4.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-5.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-6.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-7.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-8.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-9.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-10.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-11.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-12.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-13.webp" alt="월지향" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/woljihyang-new-14.webp" alt="월지향" class="photo">
+                    <img width="1080" height="1080" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-1.jpg" alt="월지향" class="photo">
+                    <img width="1200" height="676" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-2.webp" alt="월지향" class="photo">
+                    <img width="765" height="1020" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-3.webp" alt="월지향" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-4.webp" alt="월지향" class="photo">
+                    <img width="1200" height="901" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-5.webp" alt="월지향" class="photo">
+                    <img width="1200" height="900" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-6.webp" alt="월지향" class="photo">
+                    <img width="1200" height="900" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-7.webp" alt="월지향" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-8.webp" alt="월지향" class="photo">
+                    <img width="1200" height="900" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-9.webp" alt="월지향" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-10.webp" alt="월지향" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-11.webp" alt="월지향" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-12.webp" alt="월지향" class="photo">
+                    <img width="1200" height="900" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-13.webp" alt="월지향" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/woljihyang-new-14.webp" alt="월지향" class="photo">
                   </div>
                   <button class="photo-slider-prev" type="button" aria-label="이전 사진">‹</button>
                   <button class="photo-slider-next" type="button" aria-label="다음 사진">›</button>
@@ -749,7 +758,7 @@
                   <p class="t-h2 t-numeric">≈ 52,000</p>
                 </div>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-17-museum-woljihyang.png" alt="ROUTE · 국립경주박물관 → 월지향" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-17-museum-woljihyang.png" alt="ROUTE · 국립경주박물관 → 월지향" class="photo"></div>
             </div>
           </div>
         </section>
@@ -765,10 +774,10 @@
               <div class="split-photo">
                 <div class="photo-slider">
                   <div class="photo-slider-track">
-                    <img loading="lazy" decoding="async" src="assets/photos/hwangnyongsa-1.webp" alt="황룡사역사문화관" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/hwangnyongsa-2.webp" alt="황룡사역사문화관" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/hwangnyongsa-3.webp" alt="황룡사역사문화관" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/hwangnyongsa-4.webp" alt="황룡사역사문화관" class="photo">
+                    <img width="1360" height="907" loading="lazy" decoding="async" src="assets/photos/hwangnyongsa-1.webp" alt="황룡사역사문화관" class="photo">
+                    <img width="1360" height="907" loading="lazy" decoding="async" src="assets/photos/hwangnyongsa-2.webp" alt="황룡사역사문화관" class="photo">
+                    <img width="1360" height="907" loading="lazy" decoding="async" src="assets/photos/hwangnyongsa-3.webp" alt="황룡사역사문화관" class="photo">
+                    <img width="1360" height="907" loading="lazy" decoding="async" src="assets/photos/hwangnyongsa-4.webp" alt="황룡사역사문화관" class="photo">
                   </div>
                   <button class="photo-slider-prev" type="button" aria-label="이전 사진">‹</button>
                   <button class="photo-slider-next" type="button" aria-label="다음 사진">›</button>
@@ -795,7 +804,7 @@
                   <p class="t-h2 t-numeric">9,000 – 10,000</p>
                 </div>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-18-woljihyang-hwangnyongsa.png" alt="ROUTE · 월지향 → 황룡사역사문화관" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-18-woljihyang-hwangnyongsa.png" alt="ROUTE · 월지향 → 황룡사역사문화관" class="photo"></div>
             </div>
           </div>
         </section>
@@ -808,7 +817,7 @@
               <span class="scene-section">DAY 2 · 20:00 · NIGHT VIEW</span>
             </header>
             <div class="scene-body">
-              <div class="fb-image" style="background:#0a0805"><img loading="lazy" decoding="async" src="assets/photos/donggung-night.jpg" alt="동궁과 월지 야경" class="photo"></div>
+              <div class="fb-image" style="background:#0a0805"><img width="2000" height="1334" loading="lazy" decoding="async" src="assets/photos/donggung-night.jpg" alt="동궁과 월지 야경" class="photo"></div>
               <div class="fb-overlay">
                 <p class="t-eyebrow" style="color:var(--color-gold)">신라 천 년의 야경</p>
                 <div>
@@ -864,10 +873,10 @@
             </header>
             <div class="scene-body">
               <div class="coll-photos coll-photos--even" style="grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr">
-                <img loading="lazy" decoding="async" src="assets/photos/gyeongju-tower.jpg" alt="경주타워" class="photo">
-                <img loading="lazy" decoding="async" src="assets/photos/expo-park.jpg" alt="엑스포대공원 전경" class="photo">
-                <img loading="lazy" decoding="async" src="assets/photos/natural-history-museum.jpg" alt="자연사박물관" class="photo">
-                <img loading="lazy" decoding="async" src="assets/photos/culture-center.jpg" alt="문화센터 공연" class="photo">
+                <img width="2000" height="1333" loading="lazy" decoding="async" src="assets/photos/gyeongju-tower.jpg" alt="경주타워" class="photo">
+                <img width="1200" height="675" loading="lazy" decoding="async" src="assets/photos/expo-park.jpg" alt="엑스포대공원 전경" class="photo">
+                <img width="960" height="540" loading="lazy" decoding="async" src="assets/photos/natural-history-museum.jpg" alt="자연사박물관" class="photo">
+                <img width="1500" height="893" loading="lazy" decoding="async" src="assets/photos/culture-center.jpg" alt="문화센터 공연" class="photo">
               </div>
               <div class="coll-aside">
                 <p class="t-label">가족 액티비티 도입</p>
@@ -880,7 +889,7 @@
                 <p class="t-label">4인 입장</p>
                 <p class="t-h2 t-numeric">≈ 44,000</p>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-21-aventa-expo.png" alt="ROUTE · 아벤타 호텔 → 경주엑스포대공원" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-21-aventa-expo.png" alt="ROUTE · 아벤타 호텔 → 경주엑스포대공원" class="photo"></div>
             </div>
           </div>
         </section>
@@ -896,16 +905,16 @@
               <div class="split-photo">
                 <div class="photo-slider">
                   <div class="photo-slider-track">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-1.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-2.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-3.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-4.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-5.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-6.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-7.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-8.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-9.webp" alt="보문갈비" class="photo">
-                    <img loading="lazy" decoding="async" src="assets/photos/bomun-10.webp" alt="보문갈비" class="photo">
+                    <img width="1360" height="907" loading="lazy" decoding="async" src="assets/photos/bomun-1.webp" alt="보문갈비" class="photo">
+                    <img width="1360" height="907" loading="lazy" decoding="async" src="assets/photos/bomun-2.webp" alt="보문갈비" class="photo">
+                    <img width="1360" height="907" loading="lazy" decoding="async" src="assets/photos/bomun-3.webp" alt="보문갈비" class="photo">
+                    <img width="1360" height="955" loading="lazy" decoding="async" src="assets/photos/bomun-4.webp" alt="보문갈비" class="photo">
+                    <img width="680" height="1020" loading="lazy" decoding="async" src="assets/photos/bomun-5.webp" alt="보문갈비" class="photo">
+                    <img width="836" height="1020" loading="lazy" decoding="async" src="assets/photos/bomun-6.webp" alt="보문갈비" class="photo">
+                    <img width="889" height="1020" loading="lazy" decoding="async" src="assets/photos/bomun-7.webp" alt="보문갈비" class="photo">
+                    <img width="1355" height="1020" loading="lazy" decoding="async" src="assets/photos/bomun-8.webp" alt="보문갈비" class="photo">
+                    <img width="1020" height="1020" loading="lazy" decoding="async" src="assets/photos/bomun-9.webp" alt="보문갈비" class="photo">
+                    <img width="1360" height="1020" loading="lazy" decoding="async" src="assets/photos/bomun-10.webp" alt="보문갈비" class="photo">
                   </div>
                   <button class="photo-slider-prev" type="button" aria-label="이전 사진">‹</button>
                   <button class="photo-slider-next" type="button" aria-label="다음 사진">›</button>
@@ -937,7 +946,7 @@
                   <p class="t-h2 t-numeric">≈ 92,000</p>
                 </div>
               </div>
-              <div class="route-square"><img loading="lazy" decoding="async" src="assets/photos/route-22-expo-bomun.png" alt="ROUTE · 엑스포대공원 → 보문갈비" class="photo"></div>
+              <div class="route-square"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-22-expo-bomun.png" alt="ROUTE · 엑스포대공원 → 보문갈비" class="photo"></div>
             </div>
           </div>
         </section>
@@ -950,7 +959,7 @@
               <span class="scene-section">DAY 3 · 13:00 · FAMILY</span>
             </header>
             <div class="scene-body">
-              <div class="fb-image"><img loading="lazy" decoding="async" src="assets/photos/gyeongju-world.jpg" alt="경주월드" class="photo"></div>
+              <div class="fb-image"><img width="2000" height="1363" loading="lazy" decoding="async" src="assets/photos/gyeongju-world.jpg" alt="경주월드" class="photo"></div>
               <div class="fb-overlay">
                 <p class="t-eyebrow" style="opacity:0.9">아이들을 위한 마지막 페이지</p>
                 <div>
@@ -975,7 +984,7 @@
               <span class="scene-section">DAY 3 · 16:00</span>
             </header>
             <div class="scene-body">
-              <div class="split-photo"><img loading="lazy" decoding="async" src="assets/photos/route-24-world-seoul.png" alt="경주 → 서울 노선 지도" class="photo"></div>
+              <div class="split-photo"><img width="1888" height="1888" loading="lazy" decoding="async" src="assets/photos/route-24-world-seoul.png" alt="경주 → 서울 노선 지도" class="photo"></div>
               <div class="split-info">
                 <p class="t-label">복귀</p>
                 <h2 class="t-h1">서울로</h2>
