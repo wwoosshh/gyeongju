@@ -1,6 +1,141 @@
-/* Reveal.js default theme override.
-   Goal: neutralize default styles so our custom design owns the look.
-   Task 5 fills this in. */
-.reveal { font-family: var(--font-sans); color: var(--color-ink); }
-.reveal .slides { text-align: left; }
-.reveal section { font-size: inherit; line-height: inherit; }
+/* ====================================================================
+   Reveal.js Default Style Neutralization
+   Reveal의 mechanics(transform, transition, layout flow)는 유지하되
+   typographic·visual defaults를 모두 무력화하여 우리 design system이
+   완전한 통제권을 갖도록 한다.
+   ==================================================================== */
+
+/* Container: 우리 letterbox 색상 사용 */
+html, body { background: var(--color-letterbox); }
+.reveal {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: transparent;
+}
+
+/* Slides container — Reveal의 기본 패딩·정렬 제거 */
+.reveal .slides {
+  text-align: left;
+}
+
+/* Section — default padding/text-align 무력화. 우리 .scene-frame이 컨트롤 */
+.reveal .slides > section,
+.reveal .slides > section > section {
+  padding: 0;
+  text-align: left;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  height: 100%;
+}
+
+/* Reveal는 section을 absolute 위치시키지만 width/height는 1920x1080 base
+   유지. 우리 scene-frame이 100%/100% 가져갈 수 있도록 보강 */
+.reveal .slides > section.present,
+.reveal .slides > section.past,
+.reveal .slides > section.future {
+  display: block;
+}
+
+/* Reveal의 default 헤딩 스타일 전면 무력화 */
+.reveal h1, .reveal h2, .reveal h3,
+.reveal h4, .reveal h5, .reveal h6 {
+  font-family: var(--font-sans);
+  color: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  text-shadow: none;
+  margin: 0;
+  line-height: inherit;
+  word-wrap: normal;
+}
+
+/* Reveal의 default p/li/em/strong 스타일 무력화 */
+.reveal p,
+.reveal li,
+.reveal blockquote,
+.reveal pre {
+  font-family: var(--font-sans);
+  color: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+.reveal em, .reveal i { font-style: italic; }
+.reveal strong, .reveal b { font-weight: inherit; }
+
+/* Reveal의 default ul/ol 스타일 무력화 */
+.reveal ul,
+.reveal ol {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.reveal ul ul, .reveal ol ol { margin: 0; }
+.reveal li { margin: 0; }
+
+/* Reveal의 default link 스타일 무력화 */
+.reveal a {
+  color: inherit;
+  text-decoration: none;
+  transition: none;
+}
+.reveal a:hover { color: inherit; }
+
+/* Reveal의 default img 스타일 무력화 */
+.reveal img,
+.reveal section img {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Reveal의 default hr 무력화 */
+.reveal hr { border: 0; height: auto; margin: 0; }
+
+/* Reveal의 controls/progress는 init.js에서 false 처리했지만 안전망 */
+.reveal .controls,
+.reveal .progress,
+.reveal .slide-number { display: none !important; }
+
+/* Reveal의 background 색상 처리 — 우리 scene-frame이 색을 결정 */
+.reveal .backgrounds,
+.reveal .slide-background { background: transparent; }
+
+/* Reveal의 fragment transition은 기본값 fade-in 유지하되 timing 조정 */
+.reveal .fragment {
+  transition: opacity var(--t-med), transform var(--t-med);
+}
+
+/* Fragment fade-up — 약간 위로 이동하며 등장 */
+.reveal .fragment.fade-up {
+  transform: translateY(16px);
+  opacity: 0;
+}
+.reveal .fragment.fade-up.visible {
+  transform: none;
+  opacity: 1;
+}
+
+/* Fragment fade-left — 좌측에서 슬라이드 인 */
+.reveal .fragment.fade-left {
+  transform: translateX(-16px);
+  opacity: 0;
+}
+.reveal .fragment.fade-left.visible {
+  transform: none;
+  opacity: 1;
+}
+
+/* Fragment fade-right */
+.reveal .fragment.fade-right {
+  transform: translateX(16px);
+  opacity: 0;
+}
+.reveal .fragment.fade-right.visible {
+  transform: none;
+  opacity: 1;
+}
