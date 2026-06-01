@@ -64,3 +64,69 @@
   z-index: 100;
   pointer-events: none;
 }
+
+/* Top progress bar — Day 1/2/3 시간 진행률 (YouTube 재생바 스타일) */
+.time-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  pointer-events: none;
+  padding: 10px 40px 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 500ms ease, transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.time-bar.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.time-bar-track {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.time-segment {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.time-segment-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: var(--color-gold);
+  transition: width 750ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.time-bar-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.time-bar-labels span {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 400ms ease;
+}
+.time-bar.is-on-day-1 .time-bar-labels span:nth-child(1),
+.time-bar.is-on-day-2 .time-bar-labels span:nth-child(2),
+.time-bar.is-on-day-3 .time-bar-labels span:nth-child(3) {
+  color: var(--color-gold);
+}
