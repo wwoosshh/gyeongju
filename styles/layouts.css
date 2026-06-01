@@ -1,2 +1,319 @@
-/* Layout patterns + placeholder.
-   Filled in Task 6 — fullbleed / data / matrix / persona / split / collection / day-profile / type. */
+/* ====================================================================
+   Placeholder — 사진/이미지 자리. 사각형, 점선 인너 보더, 대문자 라벨.
+   ==================================================================== */
+.ph {
+  position: relative;
+  background: var(--color-divider-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-quiet);
+  font-family: var(--font-sans);
+  font-size: var(--type-caption);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.ph::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+.ph-label { position: relative; z-index: 1; padding: 0 var(--space-3); text-align: center; }
+.ph--dark { background: rgba(255, 255, 255, 0.05); color: rgba(239, 230, 208, 0.4); }
+.ph--dark::before { border-color: rgba(201, 169, 97, 0.18); }
+.ph--hero { aspect-ratio: 16 / 9; }
+.ph--4x3 { aspect-ratio: 4 / 3; }
+.ph--1x1 { aspect-ratio: 1 / 1; }
+.ph--landscape { aspect-ratio: 3 / 2; }
+
+/* ====================================================================
+   Pattern 1: Full-bleed Impact
+   사진이 전체 슬라이드를 채우고 텍스트가 오버레이된 형태.
+   ==================================================================== */
+.layout--fullbleed .scene-body { padding: 0; position: relative; }
+.layout--fullbleed .fb-image {
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-dark);
+}
+.layout--fullbleed .fb-image .ph { width: 100%; height: 100%; aspect-ratio: auto; }
+.layout--fullbleed .fb-overlay {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--slide-pad-y) var(--slide-pad-x);
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
+}
+.layout--fullbleed .scene-chrome { position: relative; z-index: 3; }
+.layout--fullbleed .scene-chrome .scene-counter,
+.layout--fullbleed .scene-chrome .scene-section { color: rgba(255, 255, 255, 0.7); }
+
+/* ====================================================================
+   Pattern 2: Data Emphasis
+   거대 숫자 + 인사이트 텍스트. 횡선으로 구획.
+   ==================================================================== */
+.layout--data .scene-body {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: var(--space-9);
+  align-items: end;
+}
+.layout--data .data-stat { display: flex; flex-direction: column; gap: var(--space-3); }
+.layout--data .data-stat-label { color: var(--color-text-muted); }
+.layout--data .data-insight {
+  border-top: var(--rule-thick) solid var(--color-ink);
+  padding-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
+/* ====================================================================
+   Pattern 3: Grid Matrix
+   3x2 또는 시간×일차 매트릭스. 박스 아닌 그리드 라인으로 구분.
+   ==================================================================== */
+.layout--matrix .scene-body { gap: var(--space-6); }
+.layout--matrix .matrix-head { display: flex; flex-direction: column; gap: var(--space-3); }
+.layout--matrix .matrix-grid {
+  display: grid;
+  flex: 1;
+  border-top: var(--rule-thick) solid var(--color-ink);
+  border-left: var(--rule-med) solid var(--color-divider-soft);
+}
+.layout--matrix .matrix-cell {
+  padding: var(--space-5) var(--space-4);
+  border-right: var(--rule-med) solid var(--color-divider-soft);
+  border-bottom: var(--rule-med) solid var(--color-divider-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.layout--matrix .matrix-cell--head {
+  background: transparent;
+}
+
+/* ====================================================================
+   Pattern 4: Persona Row (NO CARDS)
+   4분할 컬럼, 횡선 위·아래, 컬럼 사이 얇은 vertical rule.
+   ==================================================================== */
+.layout--persona .scene-body { gap: var(--space-6); justify-content: center; }
+.layout--persona .persona-head { display: flex; flex-direction: column; gap: var(--space-3); }
+.layout--persona .persona-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: var(--rule-thick) solid var(--color-ink);
+  border-bottom: var(--rule-thick) solid var(--color-ink);
+}
+.layout--persona .persona-col {
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+.layout--persona .persona-col + .persona-col {
+  border-left: var(--rule-med) solid var(--color-divider-soft);
+}
+.layout--persona .persona-num {
+  font-size: var(--type-h3);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-quiet);
+}
+
+/* ====================================================================
+   Pattern 5: Photo-Info Split
+   좌측 사진(7) / 우측 정보(5). 단순 그리드, 카드 없음.
+   ==================================================================== */
+.layout--split .scene-body {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-8);
+  align-items: stretch;
+}
+.layout--split .split-photo .ph { width: 100%; height: 100%; aspect-ratio: auto; }
+.layout--split .split-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
+  min-width: 0;
+}
+.layout--split .split-info-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: var(--rule-thick) solid var(--color-ink);
+}
+.layout--split .split-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.layout--split .split-info-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: var(--rule-med) solid var(--color-divider-faint);
+}
+
+/* ====================================================================
+   Pattern 6: Collection Grid
+   여러 사진 + 캡션 리스트. 사진은 갭 1px 그리드로.
+   ==================================================================== */
+.layout--collection .scene-body {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: var(--space-7);
+  align-items: stretch;
+}
+.layout--collection .coll-photos {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--rule-thin);
+  background: var(--color-ink);
+  border: 1px solid var(--color-ink);
+}
+.layout--collection .coll-photos > * { background: var(--color-bg); }
+.layout--collection .coll-photos > :first-child { grid-row: span 2; }
+.layout--collection .coll-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-4);
+}
+.layout--collection .coll-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.layout--collection .coll-list li {
+  padding-bottom: var(--space-2);
+  border-bottom: var(--rule-med) solid var(--color-divider-faint);
+}
+
+/* ====================================================================
+   Pattern 7: Dark Day Profile
+   장(章) 전환. 좌측 거대 DAY 숫자, 우측 일정 리스트, 하단 인디케이터.
+   ==================================================================== */
+.layout--day-profile .scene-frame { background: var(--color-bg-dark); color: #efe6d0; }
+.layout--day-profile .scene-body {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 0;
+  padding: 0;
+  flex: 1;
+}
+.layout--day-profile .dp-mark {
+  padding: var(--space-7) var(--slide-pad-x);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+.layout--day-profile .dp-mark-day {
+  font-size: clamp(140px, 16vw, 280px);
+  font-weight: 900;
+  color: var(--color-gold);
+  letter-spacing: -0.06em;
+  line-height: 0.82;
+  font-variant-numeric: tabular-nums;
+}
+.layout--day-profile .dp-theme {
+  color: #efe6d0;
+  max-width: 90%;
+}
+.layout--day-profile .dp-schedule {
+  padding: var(--space-7) var(--slide-pad-x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  justify-content: center;
+  border-left: var(--rule-med) solid rgba(201, 169, 97, 0.18);
+}
+.layout--day-profile .dp-schedule-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: var(--rule-med) solid rgba(201, 169, 97, 0.12);
+  align-items: baseline;
+}
+.layout--day-profile .dp-time {
+  color: var(--color-gold);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+.layout--day-profile .dp-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--slide-pad-x) var(--space-6);
+  grid-column: 1 / -1;
+  color: rgba(239, 230, 208, 0.5);
+  font-size: var(--type-caption);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}
+.layout--day-profile .dp-dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-gold);
+  background: transparent;
+}
+.layout--day-profile .dp-dot.is-on { background: var(--color-gold); }
+
+/* ====================================================================
+   Pattern 8: Typography Minimal
+   캠페인 카피 단독, 중앙 정렬.
+   ==================================================================== */
+.layout--type .scene-body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: var(--space-9);
+  padding-right: var(--space-9);
+  gap: var(--space-6);
+}
+.layout--type .type-copy {
+  max-width: 16ch;
+}
+.layout--type .type-rule {
+  width: 36px;
+  height: var(--rule-thick);
+  background: var(--color-ink);
+}
+
+/* ====================================================================
+   Shared utilities used inside scenes
+   ==================================================================== */
+.row-rule { border-top: var(--rule-thick) solid var(--color-ink); padding-top: var(--space-3); }
+.meta-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: var(--space-6);
+}
+.meta-row > div { display: flex; flex-direction: column; gap: var(--space-1); }
+.kv { display: flex; justify-content: space-between; gap: var(--space-4); padding: var(--space-2) 0; border-bottom: var(--rule-med) solid var(--color-divider-faint); }
+.kv:last-child { border-bottom: none; }
+.kv-key { color: var(--color-text-muted); font-size: var(--type-body-s); }
+.kv-val { font-weight: 700; font-variant-numeric: tabular-nums; }
+.stack { display: flex; flex-direction: column; gap: var(--space-3); }
+.stack--tight { gap: var(--space-2); }
+.stack--loose { gap: var(--space-5); }
