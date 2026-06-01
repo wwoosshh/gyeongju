@@ -1,0 +1,221 @@
+/* ====================================================================
+   Entry Animations — 슬라이드가 .present 상태가 되는 순간에 발동
+   카드화·라운드·그림자 없이 fade-up/stagger만으로 영화적 진입감 표현.
+   ==================================================================== */
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-up-tight {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes draw-rule {
+  from { width: 0; }
+  to   { width: 40px; }
+}
+
+@keyframes draw-divider-h {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+/* --------------------------------------------------------------------
+   Typography entrance — h1/h2/display/numeral
+   -------------------------------------------------------------------- */
+.reveal section.present .t-display,
+.reveal section.present .t-numeral-huge,
+.reveal section.present .t-h1 {
+  animation: fade-up 720ms 120ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.reveal section.present .t-h2,
+.reveal section.present .t-h3 {
+  animation: fade-up-tight 600ms 240ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.reveal section.present .t-body,
+.reveal section.present .t-body-l,
+.reveal section.present .t-body-s {
+  animation: fade-in 600ms 360ms ease-out backwards;
+}
+
+.reveal section.present .t-eyebrow,
+.reveal section.present .t-label {
+  animation: fade-in 500ms 80ms ease-out backwards;
+}
+
+/* --------------------------------------------------------------------
+   Horizontal rules — 좌→우로 그어지는 효과
+   -------------------------------------------------------------------- */
+.reveal section.present .t-rule {
+  animation: draw-rule 600ms 320ms cubic-bezier(0.7, 0, 0.3, 1) backwards;
+}
+
+.reveal section.present .data-insight {
+  animation: fade-up-tight 600ms 360ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* --------------------------------------------------------------------
+   Photo placeholders / hero images — 부드러운 페이드 인
+   -------------------------------------------------------------------- */
+.reveal section.present .ph,
+.reveal section.present .fb-image {
+  animation: fade-in 900ms ease-out backwards;
+}
+
+.reveal section.present .split-photo {
+  animation: fade-up 800ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* --------------------------------------------------------------------
+   Fullbleed overlay text — 사진 뒤에서 살짝 늦게
+   -------------------------------------------------------------------- */
+.reveal section.present .fb-overlay {
+  animation: fade-up 700ms 220ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* --------------------------------------------------------------------
+   Persona row — 4컬럼 stagger
+   -------------------------------------------------------------------- */
+.reveal section.present .persona-row {
+  animation: fade-in 200ms ease-out backwards;
+}
+.reveal section.present .persona-col {
+  animation: fade-up 650ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.reveal section.present .persona-col:nth-child(1) { animation-delay: 300ms; }
+.reveal section.present .persona-col:nth-child(2) { animation-delay: 400ms; }
+.reveal section.present .persona-col:nth-child(3) { animation-delay: 500ms; }
+.reveal section.present .persona-col:nth-child(4) { animation-delay: 600ms; }
+
+/* --------------------------------------------------------------------
+   Matrix cells — stagger entry
+   -------------------------------------------------------------------- */
+.reveal section.present .matrix-cell {
+  animation: fade-up-tight 500ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.reveal section.present .matrix-cell:nth-child(1) { animation-delay: 320ms; }
+.reveal section.present .matrix-cell:nth-child(2) { animation-delay: 380ms; }
+.reveal section.present .matrix-cell:nth-child(3) { animation-delay: 440ms; }
+.reveal section.present .matrix-cell:nth-child(4) { animation-delay: 500ms; }
+.reveal section.present .matrix-cell:nth-child(5) { animation-delay: 560ms; }
+.reveal section.present .matrix-cell:nth-child(6) { animation-delay: 620ms; }
+.reveal section.present .matrix-cell:nth-child(7) { animation-delay: 680ms; }
+.reveal section.present .matrix-cell:nth-child(8) { animation-delay: 740ms; }
+.reveal section.present .matrix-cell:nth-child(9) { animation-delay: 800ms; }
+.reveal section.present .matrix-cell:nth-child(10) { animation-delay: 860ms; }
+.reveal section.present .matrix-cell:nth-child(11) { animation-delay: 920ms; }
+.reveal section.present .matrix-cell:nth-child(12) { animation-delay: 980ms; }
+
+/* --------------------------------------------------------------------
+   Day Profile — 거대 숫자 + 일정 stagger + 인디케이터 펄스
+   -------------------------------------------------------------------- */
+.reveal section.present .dp-mark-day {
+  animation: fade-up 1000ms 100ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.reveal section.present .dp-theme {
+  animation: fade-up 700ms 500ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.reveal section.present .dp-schedule-item {
+  animation: slide-in-left 520ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.reveal section.present .dp-schedule-item:nth-child(1) { animation-delay: 240ms; }
+.reveal section.present .dp-schedule-item:nth-child(2) { animation-delay: 320ms; }
+.reveal section.present .dp-schedule-item:nth-child(3) { animation-delay: 400ms; }
+.reveal section.present .dp-schedule-item:nth-child(4) { animation-delay: 480ms; }
+.reveal section.present .dp-schedule-item:nth-child(5) { animation-delay: 560ms; }
+.reveal section.present .dp-schedule-item:nth-child(6) { animation-delay: 640ms; }
+.reveal section.present .dp-schedule-item:nth-child(7) { animation-delay: 720ms; }
+.reveal section.present .dp-schedule-item:nth-child(8) { animation-delay: 800ms; }
+
+.reveal section.present .dp-indicator {
+  animation: fade-in 800ms 1000ms ease-out backwards;
+}
+.reveal section.present .dp-dot.is-on {
+  animation: pulse-soft 2400ms 1400ms ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------
+   Split info list — KV 행 stagger
+   -------------------------------------------------------------------- */
+.reveal section.present .split-info-list li {
+  animation: fade-in 450ms ease-out backwards;
+}
+.reveal section.present .split-info-list li:nth-child(1) { animation-delay: 400ms; }
+.reveal section.present .split-info-list li:nth-child(2) { animation-delay: 470ms; }
+.reveal section.present .split-info-list li:nth-child(3) { animation-delay: 540ms; }
+.reveal section.present .split-info-list li:nth-child(4) { animation-delay: 610ms; }
+.reveal section.present .split-info-list li:nth-child(5) { animation-delay: 680ms; }
+
+.reveal section.present .split-info-meta {
+  animation: fade-up-tight 600ms 700ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* --------------------------------------------------------------------
+   Collection grid (S9, S26) — 사진들 부드럽게 등장
+   -------------------------------------------------------------------- */
+.reveal section.present .coll-photos > * {
+  animation: fade-in 600ms ease-out backwards;
+}
+.reveal section.present .coll-photos > *:nth-child(1) { animation-delay: 200ms; }
+.reveal section.present .coll-photos > *:nth-child(2) { animation-delay: 280ms; }
+.reveal section.present .coll-photos > *:nth-child(3) { animation-delay: 360ms; }
+.reveal section.present .coll-photos > *:nth-child(4) { animation-delay: 440ms; }
+.reveal section.present .coll-photos > *:nth-child(5) { animation-delay: 520ms; }
+
+.reveal section.present .coll-list li {
+  animation: fade-up-tight 500ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.reveal section.present .coll-list li:nth-child(1) { animation-delay: 400ms; }
+.reveal section.present .coll-list li:nth-child(2) { animation-delay: 500ms; }
+
+/* --------------------------------------------------------------------
+   Type minimal (S32) — 카피가 한 글자씩 등장하진 않고 줄 단위로
+   -------------------------------------------------------------------- */
+.reveal section.present .layout--type .type-rule {
+  animation: draw-rule 700ms 600ms cubic-bezier(0.7, 0, 0.3, 1) backwards;
+}
+
+/* --------------------------------------------------------------------
+   Meta row (fullbleed slides — 입장료 등)
+   -------------------------------------------------------------------- */
+.reveal section.present .meta-row > div {
+  animation: fade-up-tight 500ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.reveal section.present .meta-row > div:nth-child(1) { animation-delay: 500ms; }
+.reveal section.present .meta-row > div:nth-child(2) { animation-delay: 580ms; }
+.reveal section.present .meta-row > div:nth-child(3) { animation-delay: 660ms; }
+.reveal section.present .meta-row > div:nth-child(4) { animation-delay: 740ms; }
+
+/* --------------------------------------------------------------------
+   접근성: 사용자가 모션 줄이기 선호 시 모든 진입 애니메이션 무력화
+   -------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal section.present *,
+  .reveal section.present *::before,
+  .reveal section.present *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
