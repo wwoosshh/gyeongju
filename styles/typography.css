@@ -71,9 +71,9 @@ body {
   font-variant-numeric: tabular-nums lining-nums;
 }
 
-/* 통화 표시처럼 자릿수가 많은 경우용 축소 변형 */
+/* 통화 표시처럼 자릿수가 많은 경우용 축소 변형 (고정 px) */
 .t-numeral-huge--currency {
-  font-size: clamp(70px, 8vw, 150px);
+  font-size: 130px;
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 0.85;

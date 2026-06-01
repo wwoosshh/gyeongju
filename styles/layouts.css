@@ -221,8 +221,9 @@
   min-width: 0;
   /* 지도가 하단 점유 — 텍스트는 상단에서 시작 */
 }
-/* 지도와 공존하기 위해 split 레이아웃 한정으로 h1 축소 (다른 layout은 그대로) */
-.layout--split .split-info > .t-h1 {
+/* 지도와 공존하기 위해 split/collection 레이아웃에서 h1 축소 */
+.layout--split .split-info > .t-h1,
+.layout--collection .coll-aside > .t-h1 {
   font-size: var(--type-h2);
 }
 .layout--split .split-info-list {
@@ -292,7 +293,7 @@
 .layout--collection .coll-aside {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--space-4);
 }
 .layout--collection .coll-list {
@@ -325,7 +326,7 @@
   gap: var(--space-6);
 }
 .layout--day-profile .dp-mark-day {
-  font-size: clamp(180px, 19vw, 360px);
+  font-size: 300px;
   font-weight: 900;
   color: var(--color-gold);
   letter-spacing: -0.06em;

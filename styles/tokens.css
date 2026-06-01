@@ -19,18 +19,19 @@
   --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-serif: 'Noto Serif KR', 'Times New Roman', serif;
 
-  /* --- Type scale (slide-relative, clamp for safety) ---
-     발표용 1920×1080 + 강의실 투사 거리 고려, 큰 사이즈로 조정 */
-  --type-display: clamp(72px, 8.5vw, 160px);
-  --type-h1: clamp(56px, 5.6vw, 110px);
-  --type-h2: clamp(40px, 4.5vw, 80px);
-  --type-h3: clamp(28px, 2.8vw, 48px);
-  --type-body-l: clamp(22px, 1.7vw, 30px);
-  --type-body: clamp(20px, 1.4vw, 26px);
-  --type-body-s: clamp(17px, 1.2vw, 22px);
-  --type-eyebrow: clamp(14px, 1vw, 18px);
-  --type-caption: clamp(13px, 0.9vw, 17px);
-  --type-numeral-huge: clamp(160px, 16vw, 320px);
+  /* --- Type scale ---
+     모두 고정 px (Reveal 1920×1080 슬라이드 좌표계 기준 — Reveal 자체가 viewport에 맞춰 scale)
+     vw/vh/clamp 사용 금지: viewport 변화 시 폰트가 따로 변해서 layout이 무너짐 */
+  --type-display: 144px;
+  --type-h1: 96px;
+  --type-h2: 68px;
+  --type-h3: 40px;
+  --type-body-l: 26px;
+  --type-body: 22px;
+  --type-body-s: 19px;
+  --type-eyebrow: 16px;
+  --type-caption: 14px;
+  --type-numeral-huge: 260px;
 
   /* --- Spacing scale --- */
   --space-1: 4px;
@@ -44,10 +45,10 @@
   --space-9: 96px;
   --space-10: 128px;
 
-  /* --- Slide / layout --- */
+  /* --- Slide / layout (fixed px — slide-coord) --- */
   --slide-aspect: 16 / 9;
-  --slide-pad-x: clamp(36px, 4.5vw, 96px);
-  --slide-pad-y: clamp(28px, 3.5vh, 72px);
+  --slide-pad-x: 86px;
+  --slide-pad-y: 56px;
 
   /* --- Rules (lines/dividers) --- */
   --rule-thick: 2px;

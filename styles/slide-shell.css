@@ -46,7 +46,7 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  padding: clamp(20px, 2.5vh, 40px) var(--slide-pad-x) var(--slide-pad-y);
+  padding: 32px var(--slide-pad-x) var(--slide-pad-y);
   min-height: 0;
 }
 
