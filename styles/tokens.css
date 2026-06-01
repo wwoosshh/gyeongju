@@ -1,0 +1,66 @@
+:root {
+  /* --- Color --- */
+  --color-bg: #ffffff;
+  --color-bg-soft: #f5f1ea;
+  --color-ink: #0a0a0a;
+  --color-ink-soft: #2a2622;
+  --color-bg-dark: #1a1410;
+  --color-bg-dark-soft: #2a2018;
+  --color-gold: #c9a961;
+  --color-emphasis: #c0532a;
+  --color-text-muted: #5a5a5a;
+  --color-text-quiet: #8a8a8a;
+  --color-divider: #1a1410;
+  --color-divider-soft: #d8d4cc;
+  --color-divider-faint: #ececec;
+  --color-letterbox: #000000;
+
+  /* --- Type families --- */
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-serif: 'Noto Serif KR', 'Times New Roman', serif;
+
+  /* --- Type scale (slide-relative, clamp for safety) --- */
+  --type-display: clamp(56px, 7.2vw, 124px);
+  --type-h1: clamp(40px, 4.6vw, 80px);
+  --type-h2: clamp(28px, 3.2vw, 52px);
+  --type-h3: clamp(20px, 2.2vw, 34px);
+  --type-body-l: clamp(17px, 1.4vw, 22px);
+  --type-body: clamp(15px, 1.1vw, 18px);
+  --type-body-s: clamp(13px, 0.95vw, 15px);
+  --type-eyebrow: clamp(11px, 0.85vw, 13px);
+  --type-caption: clamp(10px, 0.78vw, 12px);
+  --type-numeral-huge: clamp(140px, 18vw, 280px);
+
+  /* --- Spacing scale --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* --- Slide / layout --- */
+  --slide-aspect: 16 / 9;
+  --slide-pad-x: clamp(36px, 4.5vw, 96px);
+  --slide-pad-y: clamp(28px, 3.5vh, 72px);
+
+  /* --- Rules (lines/dividers) --- */
+  --rule-thick: 2px;
+  --rule-med: 1px;
+  --rule-thin: 0.5px;
+
+  /* --- Letter spacing --- */
+  --ls-display: -0.035em;
+  --ls-h1: -0.025em;
+  --ls-h2: -0.015em;
+  --ls-eyebrow: 0.25em;
+  --ls-label: 0.18em;
+
+  /* --- Timing --- */
+  --t-fast: 120ms ease;
+  --t-med: 240ms ease;
+}
