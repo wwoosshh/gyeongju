@@ -1,0 +1,91 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap');
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-feature-settings: 'tnum' 1, 'kern' 1;
+  color: var(--color-ink);
+  background: var(--color-letterbox);
+}
+
+body {
+  font-size: var(--type-body);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.t-display {
+  font-size: var(--type-display);
+  font-weight: 900;
+  letter-spacing: var(--ls-display);
+  line-height: 0.95;
+}
+
+.t-h1 {
+  font-size: var(--type-h1);
+  font-weight: 900;
+  letter-spacing: var(--ls-h1);
+  line-height: 1;
+}
+
+.t-h2 {
+  font-size: var(--type-h2);
+  font-weight: 800;
+  letter-spacing: var(--ls-h2);
+  line-height: 1.05;
+}
+
+.t-h3 {
+  font-size: var(--type-h3);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+
+.t-body-l { font-size: var(--type-body-l); line-height: 1.55; font-weight: 500; }
+.t-body   { font-size: var(--type-body); line-height: 1.55; font-weight: 500; }
+.t-body-s { font-size: var(--type-body-s); line-height: 1.5; font-weight: 500; }
+
+.t-eyebrow {
+  font-size: var(--type-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.t-label {
+  font-size: var(--type-caption);
+  font-weight: 700;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--color-text-quiet);
+}
+
+.t-numeral-huge {
+  font-size: var(--type-numeral-huge);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.82;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.t-numeric { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum' 1; }
+
+.t-serif {
+  font-family: var(--font-serif);
+  font-weight: 300;
+}
+
+.t-muted { color: var(--color-text-muted); }
+.t-quiet { color: var(--color-text-quiet); }
+.t-emphasis { color: var(--color-emphasis); }
+.t-gold { color: var(--color-gold); }
+
+.t-rule {
+  height: var(--rule-thick);
+  background: var(--color-ink);
+  width: 40px;
+  border: 0;
+}
