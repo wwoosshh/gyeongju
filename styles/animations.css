@@ -38,6 +38,18 @@
   50%      { opacity: 0.55; }
 }
 
+/* 지도가 "사진 위에 툭" 놓이는 느낌 — 살짝 축소 + 위에서 내려옴 */
+@keyframes route-drop {
+  from {
+    opacity: 0;
+    transform: scale(0.86) translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 /* --------------------------------------------------------------------
    Typography entrance — h1/h2/display/numeral
    -------------------------------------------------------------------- */
@@ -207,6 +219,14 @@
 .reveal section.present .meta-row > div:nth-child(2) { animation-delay: 580ms; }
 .reveal section.present .meta-row > div:nth-child(3) { animation-delay: 660ms; }
 .reveal section.present .meta-row > div:nth-child(4) { animation-delay: 740ms; }
+
+/* --------------------------------------------------------------------
+   Route square — 사진 자리 잡힌 후 지도가 살짝 떨어지듯 등장
+   -------------------------------------------------------------------- */
+.reveal section.present .route-square {
+  animation: route-drop 800ms 700ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  transform-origin: 80% 80%; /* 우측하단 기준 — 자연스러운 "내려놓기" 느낌 */
+}
 
 /* --------------------------------------------------------------------
    접근성: 사용자가 모션 줄이기 선호 시 모든 진입 애니메이션 무력화
