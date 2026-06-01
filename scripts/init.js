@@ -99,7 +99,7 @@
   }
 
   // === Photo Slider (auto-advance + click→lightbox) ===
-  const AUTO_INTERVAL = 4500;
+  const AUTO_INTERVAL = 3000;
 
   function initPhotoSliders() {
     document.querySelectorAll('.photo-slider').forEach(setupSlider);
